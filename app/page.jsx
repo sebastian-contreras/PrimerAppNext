@@ -1,3 +1,4 @@
+import Users from "@/components/Users";
 import React from "react";
 
 async function fetchUser() {
@@ -10,10 +11,10 @@ async function IndexPage() {
   const users = await fetchUser();
 
   return (
-    <>
-      <h1>Usuarios</h1>
-      <p>{JSON.stringify(users)}</p>
-    </>
+    <div>
+      <h1>Inicio</h1>
+      <Users users={users}/>
+    </div>
   );
 }
 
